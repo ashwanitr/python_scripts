@@ -3,7 +3,7 @@ import os, sys
 import hashlib
  
 def findDup(parentFolder):
-    # Dups in format {hash:[names]}
+ 
     dups = {}
     for dirName, subdirs, fileList in os.walk(parentFolder):
         print('Scanning %s...' % dirName)
@@ -59,9 +59,9 @@ if __name__ == '__main__':
         dups = {}
         folders = sys.argv[1:]
         for i in folders:
-            # Iterate the folders given
+           
             if os.path.exists(i):
-                # Find the duplicated files and append them to the dups
+               
                 joinDicts(dups, findDup(i))
             else:
                 print('%s is not a valid path, please verify' % i)
